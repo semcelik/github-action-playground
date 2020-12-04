@@ -1,4 +1,3 @@
-import {terser} from 'rollup-plugin-terser';
 import typescript from 'rollup-plugin-typescript2';
 
 import packageJson from './package.json';
@@ -11,5 +10,5 @@ export default {
             format: 'es',
         },
     ],
-    plugins: [typescript(), terser()],
+    plugins: [typescript()],
 };
