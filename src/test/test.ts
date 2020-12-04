@@ -17,3 +17,7 @@ export function divide(first: number, second: number): number {
 export function isNumber(value: any): string {
     return "I dont know..."
 }
+
+export function isString(value: any): string {
+    return "I guess so..."
+}
