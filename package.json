@@ -1,6 +1,6 @@
 {
   "name": "@semcelik/github-action-playground",
-  "version": "0.0.6",
+  "version": "0.1.0",
   "description": "playground",
   "main": "es/index.js",
   "types": "es/index.d.ts",
