@@ -49,6 +49,7 @@ jobs:
         run: echo "new tag $NEW_TAG"
 
   create-release:
+    name: Create Release
     needs: bump-version
     if: startsWith(needs.bump-version.outputs.newTag, 'v')
     runs-on: ubuntu-latest
