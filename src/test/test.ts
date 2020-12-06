@@ -21,3 +21,7 @@ export function isNumber(value: any): string {
 export function isString(value: any): string {
     return "I guess so..."
 }
+
+export function testingSomething(value: any): string {
+    return "ok"
+}
