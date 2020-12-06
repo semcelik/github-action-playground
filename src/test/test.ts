@@ -25,3 +25,7 @@ export function isString(value: any): string {
 export function testingSomething(value: any): string {
     return "ok"
 }
+
+export function testingNewVersion(value: any): string {
+    return "ok"
+}
