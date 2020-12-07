@@ -20,7 +20,9 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Get Current Version
-        run: cat package.json | python -c 'import json,sys;obj=json.load(sys.stdin);print obj["version"]'
+        env:
+          VERSION: cat package.json | python -c 'import json,sys;obj=json.load(sys.stdin);print obj["version"]'
+        run: echo "version $VERSION"
 
       - name: Use Node.js ${{ env.NODE_VERSION }}
         uses: actions/setup-node@v1
