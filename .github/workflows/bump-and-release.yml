@@ -19,7 +19,7 @@ jobs:
       - name: Checkout source code
         uses: actions/checkout@v2
 
-      - name: cat package.json
+      - name: Get Current Version
         run: cat package.json | python -c 'import json,sys;obj=json.load(sys.stdin);print obj["version"]'
 
       - name: Use Node.js ${{ env.NODE_VERSION }}
@@ -38,8 +38,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: cat package.json
-        run: cat ./package.json
+      - name: Get New Version
+        run: cat package.json | python -c 'import json,sys;obj=json.load(sys.stdin);print obj["version"]'
 
       - name: Create New Tag
         env:
