@@ -24,7 +24,7 @@ jobs:
         id: semcelik
         uses: semcelik/commit-author-action@latest
         with:
-          email_suffix: @gmail.com
+          email_suffix: "@gmail.com"
 
       - name: test output
         env:
