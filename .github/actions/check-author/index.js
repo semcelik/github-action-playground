@@ -19,8 +19,6 @@ try {
 
 
 
-    asdasd
-
     if (invalidEmails.length === 0) {
         return console.log('Author email is valid')
     }
