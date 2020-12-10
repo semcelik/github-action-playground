@@ -8,16 +8,10 @@ try {
     const {commits} = github.context.payload
 
     const commitEmails = commits.map(c => c.author.email)
+    console.log('Email prefix pattern: ', emailSuffix)
+    console.log(`Emails to check: ${commitEmails.join(',')}`)
 
-    console.log("EMAILS: ", commitEmails)
-
-    console.log("GITHUB: ", JSON.stringify(github))
-
-    console.log(`Check author email if ends with ${emailSuffix} `)
     const invalidEmails = commitEmails.filter(email => !email.endsWith(emailSuffix))
-
-
-
 
     if (invalidEmails.length === 0) {
         return console.log('Author email is valid')
