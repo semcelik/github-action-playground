@@ -22,5 +22,7 @@ jobs:
 
       - name: Test custom action
         uses: ./.github/actions/check-author
+        with:
+          email_suffix: gmail.com
 
 

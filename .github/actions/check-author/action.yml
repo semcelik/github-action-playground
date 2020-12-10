@@ -1,5 +1,9 @@
 name: 'Check Commit Author'
 description: 'Checks email of the commit author'
+inputs:
+  email_suffix:
+    description: 'suffix of the email pattern'
+    required: true
 
 runs:
   using: node12
