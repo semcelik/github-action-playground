@@ -1,0 +1,26 @@
+name: Test
+
+on: [ push ]
+
+env:
+  NODE_VERSION: 14.x
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Use Node.js ${{ env.NODE_VERSION }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - run: yarn
+
+      - name: Test custom action
+        uses: ./.github/actions/check-author
+
+
