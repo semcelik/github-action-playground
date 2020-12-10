@@ -11,6 +11,7 @@ try {
     console.log('Email prefix pattern: ', emailSuffix)
     console.log(`Emails to check: ${commitEmails.join(',')}`)
 
+
     const invalidEmails = commitEmails.filter(email => !email.endsWith(emailSuffix))
 
     if (invalidEmails.length === 0) {
