@@ -16,6 +16,8 @@ try {
     console.log(`Check author email if ends with ${emailSuffix} `)
     const invalidEmails = commitEmails.filter(email => !email.endsWith(emailSuffix))
 
+
+
     if (invalidEmails.length === 0) {
         return console.log('Author email is valid')
     }
