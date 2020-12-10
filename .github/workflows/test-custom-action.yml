@@ -22,7 +22,7 @@ jobs:
 
       - name: Test custom action
         id: semcelik
-        uses: semcelik/commit-author-action@latest
+        uses: semcelik/commit-author-action@master
         with:
           email_suffix: "@gmail.com"
 
