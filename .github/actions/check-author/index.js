@@ -3,7 +3,13 @@ const github = require('@actions/github');
 
 
 try {
+    const {commits} = github.context.payload
+
+    const commitEmails = commits.map(c => c.author.email)
+
+    console.log("EMAILS: ", commitEmails)
+
     console.log("GITHUB: ", JSON.stringify(github))
-} catch (e){
+} catch (e) {
     core.setFailed("An error occurred: " + e.message)
 }
