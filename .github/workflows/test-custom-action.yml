@@ -21,7 +21,7 @@ jobs:
       - run: yarn
 
       - name: Test custom action
-        uses: semcelik/commit-author-action@0.1.1
+        uses: semcelik/commit-author-action
         with:
           email_suffix: gmail.com
 
