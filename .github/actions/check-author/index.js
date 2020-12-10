@@ -17,7 +17,7 @@ try {
     const invalidEmails = commitEmails.filter(email => !email.endsWith(emailSuffix))
 
 
-
+asdasd
 
     if (invalidEmails.length === 0) {
         return console.log('Author email is valid')
