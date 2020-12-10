@@ -21,7 +21,12 @@ jobs:
       - run: yarn
 
       - name: Test custom action
+        id: semcelik
         uses: semcelik/commit-author-action@latest
         with:
           email_suffix: @gmail.com
 
+      - name: test output
+        env:
+          IS_VALID: ${{ steps.semcelik.outputs.is_valid }}
+        run: echo "isValid $IS_VALID"
