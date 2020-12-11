@@ -26,6 +26,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           email_suffix: "@gmail.com"
+          github_event_path: ${{ env.GITHUB_EVENT_PATH }}
 
       - name: test output
         env:
