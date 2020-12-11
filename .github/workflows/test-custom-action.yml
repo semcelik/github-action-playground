@@ -25,8 +25,6 @@ jobs:
       - name: Test custom action
         id: semcelik
         uses: semcelik/commit-author-action@test
-        env:
-          GITHUB_EVENT_PATH: ${{ GITHUB_EVENT_PATH }}
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           email_suffix: "@gmail.com"
