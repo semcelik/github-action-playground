@@ -24,7 +24,7 @@ jobs:
 
       - name: Test custom action
         id: semcelik
-        uses: semcelik/commit-author-action@test
+        uses: semcelik/commit-author-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           email_suffix: "@gmail.com"
