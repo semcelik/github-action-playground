@@ -1,6 +1,8 @@
 name: Test
 
-on: [ push ]
+on:
+  pull_request:
+    branches: [ master ]
 
 env:
   NODE_VERSION: 14.x
