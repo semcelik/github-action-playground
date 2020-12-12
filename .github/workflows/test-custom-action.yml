@@ -22,9 +22,9 @@ jobs:
 
       - run: yarn
 
-      - name: Test custom action
+      - name: Commit Author Action
         id: semcelik
-        uses: semcelik/commit-author-action@error-on-fail
+        uses: semcelik/commit-author-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           email_domain: "@gmail.com"
