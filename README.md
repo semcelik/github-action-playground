@@ -4,8 +4,14 @@ this project contains some github action workflows as a playground for myself
 
 ## workflow samples
 
-### [bump-and-release](https://github.com/semcelik/github-action-playground/blob/master/.github/workflows/bump-and-release.yml)
+### [commit-author](https://github.com/semcelik/github-action-playground/blob/master/.github/workflows/commit-author.yml) (created by me)
+(on every push)
 
+- Checks commit's author email if it is end with **@gmail.com**
+
+[More Info](https://github.com/semcelik/commit-author-action)
+
+### [bump-and-release](https://github.com/semcelik/github-action-playground/blob/master/.github/workflows/bump-and-release.yml)
 (on push master)
 
 - Bumps version if merged pull request's commit message contains **PATCH**, **MINOR**, **MAJOR** prefix
