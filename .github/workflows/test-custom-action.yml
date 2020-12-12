@@ -25,7 +25,7 @@ jobs:
         uses: semcelik/commit-author-action@test
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          email_suffix: "@gmail.com"
+          email_domain: "@gmail.com"
 
       - name: test output
         env:
