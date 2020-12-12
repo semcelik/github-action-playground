@@ -28,7 +28,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           email_domain: "@gmail.com"
-          error_on_fail: false
+          error_on_fail: true
 
       - name: test output
         env:
