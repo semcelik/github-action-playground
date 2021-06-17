@@ -30,13 +30,13 @@ jobs:
       - name: Install dependencies
         run: yarn
 
-      #- name: Run tests
-      #  run: yarn test
+      - name: Run tests
+        run: yarn test
 
       - name: Create build
         run: yarn build
 
       - name: Publish to NPM
-        run: yarn publish
+        run: echo "NPM published"
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
