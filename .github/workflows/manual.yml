@@ -41,15 +41,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Commit Author Action
-        id: semcelik
-        uses: semcelik/commit-author-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          email_domain: "@gmail.com"
-          error_on_fail: true
-
       - name: test output
         env:
-          IS_VALID: ${{ steps.semcelik.outputs.is_valid }}
-        run: echo "isValid $IS_VALID"
+          IS_VALID: ${{ github.event.inputs.environment }}
+        run: echo "env $IS_VALID"
