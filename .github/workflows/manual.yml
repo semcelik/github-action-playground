@@ -28,7 +28,9 @@ on:
       env-3:
         type: choice
         default: staging
-        description: "Select environment: (If you have sql to run at home, don't forget to run it)"
+        description: |
+          "Select environmentxx:"
+          "(If you have sql to run at home, don't forget to run it)"
         options:
           - staging
           - production
