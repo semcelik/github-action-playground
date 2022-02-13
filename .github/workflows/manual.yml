@@ -25,24 +25,9 @@ on:
           - staging
           - production
         required: true
-      env-3:
-        type: choice
-        default: staging
-        description: |
-          "Select environmentxx:"
-          "(If you have sql to run at home, don't forget to run it)"
-        options:
-          - staging
-          - production
-        required: true
-      env-4:
-        type: choice
-        default: staging
-        description: "Select environment: (If you have sql to run at home, \n don't forget to run it)"
-        options:
-          - staging
-          - production
-        required: true
+      script-check:
+        type: boolean
+        description: (Production only) If you have migration script to run, do not forget
       version:
         default: ""
         description: Version; v1.2.3 or empty for latest
