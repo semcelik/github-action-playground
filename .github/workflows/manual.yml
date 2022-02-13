@@ -28,7 +28,8 @@ on:
       script-check:
         default: "true"
         type: boolean
-        description: (Production only) If you have migration script to run, do not forget
+        description: (Production only) If you have migration script to run, do not forget to run
+        required: false
 
 env:
   NODE_VERSION: 14.x
