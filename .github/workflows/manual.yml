@@ -26,21 +26,21 @@ on:
           - production
         required: true
       env-3:
-          type: choice
-          default: staging
-          description: "Select environment: (If you have sql to run at home, don't forget to run it)"
-          options:
-            - staging
-            - production
-          required: true
+        type: choice
+        default: staging
+        description: "Select environment: (If you have sql to run at home, don't forget to run it)"
+        options:
+          - staging
+          - production
+        required: true
       env-4:
-            type: choice
-            default: staging
-            description: "Select environment: (If you have sql to run at home, \n don't forget to run it)" \n "tset"
-            options:
-              - staging
-              - production
-            required: true
+        type: choice
+        default: staging
+        description: "Select environment: (If you have sql to run at home, \n don't forget to run it)" \n "tset"
+        options:
+          - staging
+          - production
+        required: true
       version:
         default: ""
         description: Version; v1.2.3 or empty for latest
