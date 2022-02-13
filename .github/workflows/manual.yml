@@ -1,0 +1,55 @@
+name: Manual check
+
+on:
+  workflow_run:
+    #branches:
+    #- "*"
+    workflows:
+      - "Release (Jar-Github-S3)"
+      - release.yml
+    types:
+      - completed
+    #tags:
+    #- "v*"
+  workflow_dispatch:
+    inputs:
+      environment:
+        default: staging
+        description: Environment; staging, production
+        required: true
+      env-2:
+        type: choice
+        default: staging
+        description: Select environment
+        options:
+          - staging
+          - production
+        required: true
+      version:
+        default: ""
+        description: Version; v1.2.3 or empty for latest
+        required: false
+
+env:
+  NODE_VERSION: 14.x
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Commit Author Action
+        id: semcelik
+        uses: semcelik/commit-author-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          email_domain: "@gmail.com"
+          error_on_fail: true
+
+      - name: test output
+        env:
+          IS_VALID: ${{ steps.semcelik.outputs.is_valid }}
+        run: echo "isValid $IS_VALID"
