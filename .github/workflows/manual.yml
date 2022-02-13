@@ -26,6 +26,7 @@ on:
         description: Version; v1.2.3 or empty for latest
         required: false
       script-check:
+        default: "true"
         type: boolean
         description: (Production only) If you have migration script to run, do not forget
 
