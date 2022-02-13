@@ -25,13 +25,13 @@ on:
           - staging
           - production
         required: true
-      script-check:
-        type: boolean
-        description: (Production only) If you have migration script to run, do not forget
       version:
         default: ""
         description: Version; v1.2.3 or empty for latest
         required: false
+      script-check:
+        type: boolean
+        description: (Production only) If you have migration script to run, do not forget
 
 env:
   NODE_VERSION: 14.x
