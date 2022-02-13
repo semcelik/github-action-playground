@@ -36,7 +36,7 @@ on:
       env-4:
         type: choice
         default: staging
-        description: "Select environment: (If you have sql to run at home, \n don't forget to run it)" \n "tset"
+        description: "Select environment: (If you have sql to run at home, \n don't forget to run it)"
         options:
           - staging
           - production
