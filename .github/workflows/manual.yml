@@ -14,10 +14,6 @@ on:
   workflow_dispatch:
     inputs:
       environment:
-        default: staging
-        description: Environment; staging, production
-        required: true
-      env-2:
         type: choice
         default: staging
         description: Select environment
