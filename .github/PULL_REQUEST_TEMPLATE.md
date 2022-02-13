@@ -1,4 +1,4 @@
-## Did you fix if there is a change that needs to be done on:
+### If there is a change that needs to be made, have you fixed it?
 
-- [x] Contactless WEB or Contactless APP
-- [x] Admin Frontend or Admin Backend
+- [ ] Contactless WEB or Contactless APP
+- [ ] Admin Frontend or Admin Backend
